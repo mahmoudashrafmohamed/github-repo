@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable name="repo"
+            type="com.dev.mahmoud_ashraf.github_repo.data.model.RepoModel" />
+    </data>
+
+    <LinearLayout
+        android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        android:layout_margin="4dp"
+        android:paddingStart="2dp"
+        android:paddingEnd="2dp"
+        android:orientation="vertical">
+
+            <TextView
+                android:layout_marginStart="8dp"
+                android:id="@+id/title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxLines="3"
+                android:text="@{repo.name}"
+                android:textColor="@color/colorPrimary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                tools:text="Repo Title" />
+
+            <TextView
+                android:layout_marginStart="8dp"
+                android:id="@+id/desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:text="@{repo.description}"
+                android:textColor="@color/colorAccent"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                tools:text="Repo Release" />
+
+
+        </LinearLayout>
+
+</layout>
